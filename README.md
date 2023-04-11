@@ -1,1 +1,0 @@
-# medetshin.github.io
