@@ -1,1 +1,108 @@
-doc tab
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--     <script>
+    // Initialize the agent at application startup.
+    const fpPromise = import('https://fpjscdn.net/v3/CMkmDlV8g6kpfa6sY9E2')
+      .then(FingerprintJS => FingerprintJS.load({
+        region: "eu"
+      }))
+    // Get the visitor identifier when you need it.
+    fpPromise
+      .then(fp => fp.get())
+      .then(result => {
+        // This is the visitor identifier:
+        const visitorId = result.visitorId
+        console.log(visitorId)
+      })
+  </script>
+    <script>
+        (function (p, a, y, b, o, x) {
+            o = p.createElement(a);
+            x = p.getElementsByTagName(a)[0];
+            o.async = 1;
+            o.src = 'https://widget.paybox.money/v1/paybox/pbwidget.js?d=9.09.2022 14:24:51'
+            x.parentNode.insertBefore(o, x);
+        })(document, 'script');
+    </script>
+    <script src="https://api.paybox.money/client_script.js"></script> -->
+</head>
+<body>
+<!--     <button onclick="pay(100)">Оплатить</button>
+ <script>
+          function pay(amount) {
+            var data = {
+                token: "GD6V1FisqGaETHMx1tOMxQLjs6PiKN0F",
+                payment: {
+                    order: "1asdasd asdasdasdas213 31212",
+                    amount: "10",
+                    currency: "KZT",
+                    description: "Описание заказа",
+                    param1: "string",
+                    param2: "string",
+                    param3: "string",
+                    options: {
+                        callbacks: {},
+                        custom_params: {},
+                        user: {
+                            ip: "192.168.1.1",
+                            email: "user@test1.com",
+                            phone: "77777777777",
+                        }
+                    }
+                },
+                successCallback: function (payment) {
+                    console.log(payment);
+                },
+                errorCallback: function (payment) {
+                    console.log(payment);
+                }
+            }
+            var paybox = new PayBox(data);
+            paybox.create();
+        }
+    </script> -->
+    
+    <div id="myapplepay"></div>
+    
+    <script src="https://customer.paybox.money/tokens/pay-buttons-client.js"></script>
+    
+    <script>
+//         window.onload = () => {
+//         function success(r) {
+//                 alert('success', JSON.stringify(r));
+//             }
+//             function error(r) {
+//                 alert('error', JSON.stringify(r));
+//             }
+//             function canMake() {
+//                 alert('canMake');
+//             }
+//             function cantMake(err) {
+//                 alert(JSON.stringify(err));
+//             }
+//             window.PayBoxPayButtons(
+//                 'myapplepay',
+//                 '84VNru4BfZlmyuxQkW6sbxVWmHE7MBpk', // qZ0iGnvGZTMuU0RTdBHsCXe9XPPG2auw CdLAdlGDTVZwvPhOBNsY5BotwMgVIN8b
+//                 {
+//                     amount: 100, description: 'aasdasd asdssd'
+//                 },
+//                 success,
+//                 error,
+//                 canMake,
+//                 cantMake
+//             );
+//         };
+        async function a() {
+            const response = await window.ApplePaySession.canMakePaymentsWithActiveCard('merchant.money.paybox.customer');
+        
+            alert(response);
+        }
+        
+        a();
+        
+    </script>
+</body>
+</html>
